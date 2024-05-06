@@ -1,6 +1,6 @@
 BL_Scripts = {}
 
-BL_Scripts.Menu = 'esx_default_menu' -- ox / rage / esx_default_menu
+BL_Scripts.Menu = 'rage' -- ox / rage / esx_default_menu
 
 BL_Scripts.NotifyPosition = 'top'
 BL_Scripts.Position = 'top-right'
@@ -8,6 +8,8 @@ BL_Scripts.Position = 'top-right'
 BL_Scripts.Command = 'vehiclemenu'
 
 BL_Scripts.Banner = 'YOUR LINK' -- only for rage ui!
+
+BL_Scripts.Key = 'm' -- key to open the menu
 
 BL_Scripts.Debug = true 
 

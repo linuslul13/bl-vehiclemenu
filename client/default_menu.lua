@@ -413,6 +413,8 @@ if BL_Scripts.Menu == 'esx_default_menu' then
         end
     end)
 
+    RegisterKeyMapping(BL_Scripts.Command, 'Vehicle Menu', 'keyboard', BL_Scripts.Key)
+
     function BL_GetTurbo()
         local veh = GetVehiclePedIsIn(PlayerPedId())
         if IsToggleModOn(veh, 18) == false then 

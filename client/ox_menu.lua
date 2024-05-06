@@ -6,6 +6,7 @@ if BL_Scripts.Menu == 'ox' then
             lib.showMenu('bl_core_vehiclemenu')
         end
     end)
+    RegisterKeyMapping(BL_Scripts.Command, 'Vehicle Menu', 'keyboard', BL_Scripts.Key)
 lib.registerMenu({
         id = 'bl_core_vehiclemenu',
         title = BL_Scripts.language.menu_title,

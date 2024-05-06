@@ -421,4 +421,6 @@ RegisterCommand(BL_Scripts.Command, function()
     RageUI.UpdateHeader(BL_Scripts.Banner, 611, 344)
     RageUI.Visible(VehicleMenu, true)
 end)
+
+RegisterKeyMapping(BL_Scripts.Command, 'Vehicle Menu', 'keyboard', BL_Scripts.Key)
 end
