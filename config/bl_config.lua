@@ -1,6 +1,6 @@
 BL_Scripts = {}
 
-BL_Scripts.Menu = 'rage' -- ox / rage / esx_default_menu
+BL_Scripts.Menu = 'radial_menu' -- ox / rage / esx_default_menu / radial_menu
 
 BL_Scripts.NotifyPosition = 'top'
 BL_Scripts.Position = 'top-right'
@@ -47,6 +47,7 @@ BL_Scripts.Icons = {
     ['engien'] = 'car-battery',
     ['auto_pilot'] = 'robot',
     ['drive_speed'] = 'gauge',
+    ['radial_vehicle'] = 'car'
 }
 
 BL_Scripts.language = {
