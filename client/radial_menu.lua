@@ -449,6 +449,12 @@ if BL_Scripts.Menu == 'radial_menu' then
         id = 'vehiclemenu',
         label = 'Vehicle Menu',
         icon = BL_Scripts.Icons.radial_vehicle,
+        onSelect = function()
+            if not hasAllowedJob(source) then 
+                lib.hideRadial()
+                return BL_Notify('error', BL_Scripts.Notify.ServerName, BL_Scripts.language.not_allowed_job, 5000)
+            end
+        end,
         menu = 'bl_vehiclemenu'
         },
     })

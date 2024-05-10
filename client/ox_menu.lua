@@ -1,9 +1,13 @@
 if BL_Scripts.Menu == 'ox' then 
     RegisterCommand(BL_Scripts.Command, function()
-        if GetVehiclePedIsIn(PlayerPedId()) == 0 then 
-            BL_Notify('error', BL_Scripts.Notify.ServerName, BL_Scripts.language.no_vehicle, 5000)
+        if hasAllowedJob(source) then 
+            if GetVehiclePedIsIn(PlayerPedId()) == 0 then 
+                BL_Notify('error', BL_Scripts.Notify.ServerName, BL_Scripts.language.no_vehicle, 5000)
+            else
+                lib.showMenu('bl_core_vehiclemenu')
+            end
         else
-            lib.showMenu('bl_core_vehiclemenu')
+            BL_Notify('error', BL_Scripts.Notify.ServerName, BL_Scripts.language.not_allowed_job, 5000)
         end
     end)
     RegisterKeyMapping(BL_Scripts.Command, 'Vehicle Menu', 'keyboard', BL_Scripts.Key)

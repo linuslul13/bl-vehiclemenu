@@ -418,8 +418,12 @@ function RageUI.PoolMenus:BLVehicleMenu()
 end
 
 RegisterCommand(BL_Scripts.Command, function()
-    RageUI.UpdateHeader(BL_Scripts.Banner, 611, 344)
-    RageUI.Visible(VehicleMenu, true)
+    if hasAllowedJob(source) then 
+        RageUI.UpdateHeader(BL_Scripts.Banner, 611, 344)
+        RageUI.Visible(VehicleMenu, true)
+    else
+        BL_Notify('error', BL_Scripts.Notify.ServerName, BL_Scripts.language.not_allowed_job, 5000)
+    end
 end)
 
 RegisterKeyMapping(BL_Scripts.Command, 'Vehicle Menu', 'keyboard', BL_Scripts.Key)

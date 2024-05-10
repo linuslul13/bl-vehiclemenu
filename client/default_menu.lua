@@ -406,12 +406,16 @@ if BL_Scripts.Menu == 'esx_default_menu' then
     end
 
     RegisterCommand(BL_Scripts.Command, function()
-        if GetVehiclePedIsIn(PlayerPedId()) == 0 then 
-            BL_Notify('error', BL_Scripts.Notify.ServerName, BL_Scripts.language.no_vehicle, 5000)
+        if hasAllowedJob(source) then  
+            if GetVehiclePedIsIn(PlayerPedId()) == 0 then 
+                BL_Notify('error', BL_Scripts.Notify.ServerName, BL_Scripts.language.no_vehicle, 5000)
+            else
+                openvehiclemenu()
+            end
         else
-            openvehiclemenu()
+            BL_Notify('error', BL_Scripts.Notify.ServerName, BL_Scripts.language.not_allowed_job, 5000)
         end
-    end)
+     end)
 
     RegisterKeyMapping(BL_Scripts.Command, 'Vehicle Menu', 'keyboard', BL_Scripts.Key)
 

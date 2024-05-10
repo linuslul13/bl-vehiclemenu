@@ -11,6 +11,9 @@ BL_Scripts.Banner = 'YOUR LINK' -- only for rage ui!
 
 BL_Scripts.Key = 'm' -- key to open the menu
 
+BL_Scripts.Jobs = true  -- only if you want to use specific jobs
+BL_Scripts.AllowedJobs = {'police', 'mechanic', 'taxi'} 
+
 BL_Scripts.Debug = true 
 
 BL_Scripts.Notify = {
@@ -118,4 +121,5 @@ BL_Scripts.language = {
     ['vehicle_turbo'] = 'Turbo: %s',
     ['vehicle_turbo_disabled'] = 'DISABLED',
     ['vehicle_turbo_enabled'] = 'ENABLED',
+    ['not_allowed_job'] = 'False Job',
 }
